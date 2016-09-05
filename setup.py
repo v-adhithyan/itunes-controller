@@ -25,6 +25,8 @@ except:
 setup(
     name = "itunescontroller",
     packages = ["itunescontroller"],
+    package_data = {'itunescontroller' : ['data/*.xml']},
+    include_package_data = True,
     version = "1",
     description = "Control iTunes using hand gestures.",
     url = "https://github.com/v-adhithyan/itunes-controller",
