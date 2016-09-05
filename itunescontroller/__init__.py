@@ -1,3 +1,5 @@
+import random
 
 def main():
-    print("Hello iTunes controller")
+    result = ["face", "no face"]
+    print(result[random.randint(0, 1)])
