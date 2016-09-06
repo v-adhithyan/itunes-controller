@@ -1,5 +1,4 @@
 -- This function returns true, if iTunes is running.
-
 on iTunesRunning()
 	tell application "System Events" to (name of processes) contains "iTunes"
 end iTunesRunning
@@ -11,8 +10,7 @@ If a face is detected, then mac user is in front of the screen, so now if the pl
 
 set playing to iTunesRunning()
 if playing then
-	set away to do shell script "itunescontroller"
-	
+	set away to do shell script "/usr/local/bin/itunescontroller"
 	if ((away as string) contains "no face") then
 		tell application "iTunes" to pause
 	else if ((away as string) contains "face") then
