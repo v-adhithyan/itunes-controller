@@ -38,6 +38,6 @@ def main():
 
     if img is not None:
         if detect_face(img):
-            print "face"
+            print("face")
         else:
-            print "no face"
+            print("no face")
