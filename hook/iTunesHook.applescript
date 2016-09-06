@@ -5,20 +5,23 @@ end iTunesRunning
 
 (* Check if iTunes is running.
 If iTunes is running, then run the itunescontroller python utility.
-If no face is detected, then probably the mac user is away, so pause playback.
+If no face is detected, then probably the mac user is detection, so pause playback.
 If a face is detected, then mac user is in front of the screen, so now if the playback is paused then start playing. *)
 
-set playing to iTunesRunning()
-if playing then
-	set away to do shell script "/usr/local/bin/itunescontroller"
-	if ((away as string) contains "no face") then
-		tell application "iTunes" to pause
-	else if ((away as string) contains "face") then
-		tell application "iTunes"
-			set playerState to player state as string
+if iTunesRunning() then
+	set detection to do shell script "/usr/local/bin/itunescontroller" as string
+	tell application "iTunes"
+		set playerState to player state as string
+		if detection contains "no face" then
+			if playerState is "playing" then
+				display notification "No user in front of mac. iTunes will be paused."
+				pause
+			end if
+		else
 			if playerState is "paused" or playerState is "stopped" then
+				display notification "Welcome back. iTunes will start playing."
 				play
 			end if
-		end tell
-	end if
+		end if
+	end tell
 end if
