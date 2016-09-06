@@ -5,7 +5,7 @@
 	<key>Disabled</key>
 	<false/>
 	<key>Label</key>
-	<string>iTunescontroller</string>
+	<string>me.adhithyan.iTunescontroller</string>
 	<key>Program</key>
 	<string>/usr/bin/osascript</string>
 	<key>ProgramArguments</key>
@@ -16,6 +16,6 @@
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StartInterval</key>
-	<integer>60</integer>
+	<integer>15</integer>
 </dict>
 </plist>

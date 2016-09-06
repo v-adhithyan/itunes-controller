@@ -2,12 +2,10 @@ import os
 import random
 import sys
 import cv2
-import StringIO
 
 path = os.path.abspath(os.path.dirname(__file__))
 
 def capture_pic():
-
     cam = cv2.VideoCapture(0)
     captured, img = cam.read()
     #cam.release()

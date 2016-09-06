@@ -28,16 +28,17 @@ setup(
     packages = ["itunescontroller"],
     package_data = {'itunescontroller' : ['data/*.xml']},
     include_package_data = True,
-    version = "1",
+    version = "0.0.1",
     description = "Control iTunes using hand gestures.",
     url = "https://github.com/v-adhithyan/itunes-controller",
     author = "Adhithyan Vijayakumar",
     author_email = "pollachi.developer@gmail.com",
     license = "MIT",
     classifiers = [
-        "Intended Audience :: End Users, Developers",
-        "License :: MIT",
-        "Operating System :: macOS",
+        "Intended Audience :: End Users/Desktop",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: MacOS",
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3"
     ],
@@ -66,7 +67,7 @@ if not os.path.exists(dirname):
     print("Directory created ....")
 
 script_file = dirname + os.path.sep + "iTuneshook.applescript"
-plist_file = launch_agent_dir + "iTunescontroller.plist"
+plist_file = launch_agent_dir + "me.adhithyan.iTunescontroller.plist"
 
 applescript = '''-- This function returns true, if iTunes is running.
 on iTunesRunning()
@@ -102,7 +103,7 @@ plist = '''<?xml version="1.0" encoding="UTF-8"?>
 <key>Disabled</key>
 <false/>
 <key>Label</key>
-<string>iTunescontroller</string>
+<string>me.adhithyan.iTunescontroller</string>
 <key>Program</key>
 <string>/usr/bin/osascript</string>
 <key>ProgramArguments</key>
