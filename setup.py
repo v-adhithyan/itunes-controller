@@ -1,3 +1,4 @@
+from glob import glob
 import os
 import platform
 import sys
@@ -22,14 +23,16 @@ except:
         print("Setup terminated because this utility requires Open CV and you don't want to install it")
         sys.exit(1)
 
+data = glob("data/*.xml")
+
 # if the above checks don't fail, proceed with installation
 setup(
     name = "itunescontroller",
     packages = ["itunescontroller"],
-    package_data = {'itunescontroller' : ['data/*.xml']},
+    package_data = {'itunescontroller' : data},
     include_package_data = True,
-    version = "0.2",
-    description = "Control iTunes using hand gestures.",
+    version = "0.5",
+    description = "Play/Pause iTunes with face.",
     url = "https://github.com/v-adhithyan/itunes-controller",
     author = "Adhithyan Vijayakumar",
     author_email = "pollachi.developer@gmail.com",
