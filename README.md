@@ -28,14 +28,11 @@
 
   * The utility will continuosly run in background for every 15 seconds.
 
- For more details, see [setup.py](https://github.com/v-adhithyan/itunes-controller/blob/master/setup.py) file, [init.py](https://github.com/v-adhithyan/itunes-controller/blob/master/itunescontroller/__init__.py) file and [hook](https://github.com/v-adhithyan/itunes-controller/tree/master/hook) directory.
 
- ## Contributing
+## To do
 
- - [ ] Check whether it is working in python 3.
-
-Any suggestions are welcome.
+- [ ] Check whether it is working in Python 3.
 
 ## License
 
-  MIT.
+  Released under MIT license.
