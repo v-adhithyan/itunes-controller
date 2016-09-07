@@ -24,10 +24,9 @@
 
   * On installation using pip, a folder .itunescontroller is created in user home and a applescript is copied to that folder. The applescript checks if itunes is running. If itunes is running, it calls itunescontroller utility for face detection. If result is no face and if itunes is playing, it will be paused and if the result is face and if itunes is not playing, it will start playing.
 
-  * After installation, a [**plist**](https://github.com/v-adhithyan/itunes-controller/blob/master/hook/me.adhithyan.iTunescontroller.plist) is created in **/Library/LaunchAgents** which invokes ** applescript every 15 seconds to do the itunes control**.
+  * After installation, a [**plist**](https://github.com/v-adhithyan/itunes-controller/blob/master/hook/me.adhithyan.iTunescontroller.plist) is created in **/Library/LaunchAgents** which invokes applescript which controls iTunes.
 
- * The utility will continuosly run in background for every 15 seconds.
-
+  * The utility will continuosly run in background for every 15 seconds.
 
  For more details, see [setup.py](https://github.com/v-adhithyan/itunes-controller/blob/master/setup.py) file, [init.py](https://github.com/v-adhithyan/itunes-controller/blob/master/itunescontroller/__init__.py) file and [hook](https://github.com/v-adhithyan/itunes-controller/tree/master/hook) directory.
 
