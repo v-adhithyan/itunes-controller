@@ -60,6 +60,7 @@ def write_to_file(filename, content):
         f.write(content)
 
 # create a hidden folder named itunescontroller in User home.
+# try to use os.path.expanduser here. 
 home_dir = os.getenv('HOME') + os.path.sep
 dirname = home_dir + ".itunescontroller"
 launch_agent_dir = "/Library/LaunchAgents/"
