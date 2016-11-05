@@ -1,4 +1,7 @@
 # itunes-controller
+![pip](https://img.shields.io/pypi/v/pip.svg)
+![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/v-adhithyan/itunes-controller/blob/master/LICENSE)
+
 
   Play/Pause itunes with face.
 
@@ -15,6 +18,14 @@
   ```
 
   * **Runs only on macOS**.
+
+## Screenshots
+
+  * When you are away, you will get a notification indicating itunes has paused.
+  ![pause](https://raw.githubusercontent.com/v-adhithyan/itunes-controller/master/screenshots/pause.png)
+
+  * When you are back, you will get a notification indicating itunes has started playing.
+  ![play](https://raw.githubusercontent.com/v-adhithyan/itunes-controller/master/screenshots/play.png)
 
 ## Working
 
