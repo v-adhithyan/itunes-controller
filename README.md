@@ -1,6 +1,8 @@
 # itunes-controller
-![pip](https://img.shields.io/pypi/v/pip.svg)
-![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/v-adhithyan/itunes-controller/blob/master/LICENSE)
+[![pip](https://img.shields.io/pypi/v/pip.svg)](https://pypi.python.org/pypi/itunescontroller/0.5)
+
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/v-adhithyan/awesome-chrome-extensions/blob/master/LICENSE)
+
 
 
   Play/Pause itunes with face.
