@@ -2,6 +2,7 @@ import os
 import random
 import sys
 import cv2
+import argparse
 
 path = os.path.abspath(os.path.dirname(__file__))
 
@@ -32,10 +33,25 @@ def detect_face(img):
     return len(faces) > 0
 
 def main():
-    img = capture_pic()
+    launch_agent_dir = "/Library/LaunchAgents/"
+    plist_file = launch_agent_dir + "me.adhithyan.iTunescontroller.plist"
 
-    if img is not None:
-        if detect_face(img):
-            print("face")
-        else:
-            print("no face")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--enable", help="Enable itunes-controller", action="store_true")
+    parser.add_argument("--disable", help="Disable itunes-controller", action="store_true")
+
+    args = parser.parse_args()
+
+    if args.enable:
+        print "Enable itunescontroller"
+        os.system("launchctl load " + plist_file)
+    elif args.disable:
+        print "Disable itunescontroller .."
+        os.system("launchctl unload " + plist_file)
+    else:
+        img = capture_pic()
+        if img is not None:
+            if detect_face(img):
+                print("face")
+            else:
+                print("no face")
