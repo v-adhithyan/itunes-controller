@@ -55,3 +55,5 @@ def main():
                 print("face")
             else:
                 print("no face")
+
+main()
